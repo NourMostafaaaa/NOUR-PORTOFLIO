@@ -121,7 +121,7 @@
         </div>
       </div>
       <div style="text-align:center">
-        <img src="c:\Users\hp\Downloads\WhatsApp Image 2025-08-26 at 1.19.46 AM.jpeg" alt="Nour Moustafa" class="hero-img" />
+        <img src="c:\Users\hp\OneDrive - Egyptian E-Learning University\Desktop\PORTOFOLIO\WhatsApp Image 2025-08-26 at 1.19.46 AM.jpeg" alt="Nour Moustafa" class="hero-img" />
       </div>
     </section>
 
