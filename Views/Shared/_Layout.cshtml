@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nour Moustafa — Computer Engineer working across software, AI, data, ERP solutions and automation." />
+  <meta name="theme-color" content="#080b12" />
+  <title>@ViewData["Title"] | Nour Moustafa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">N.</span> NOUR MOUSTAFA</a>
+  <nav><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Let's talk <span>↗</span></a></nav>
+</header>
+<main>@RenderBody()</main>
+<footer><span>© @DateTime.Now.Year Nour Moustafa</span><span>Built with C# · ASP.NET Core · curiosity</span></footer>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
