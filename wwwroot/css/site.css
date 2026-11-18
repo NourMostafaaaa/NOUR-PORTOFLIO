@@ -82,3 +82,39 @@ footer{border-top-color:rgba(190,165,255,.16)}
  .card-ai{animation-delay:.12s}.card-erp{animation-delay:.22s}
 }
 @keyframes soft-rise{from{opacity:.72;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+
+/* Animated tech portfolio layer — polished motion and interactive depth */
+:root{--glow:rgba(173,128,255,.28)}
+.topbar{box-shadow:0 8px 35px rgba(0,0,0,.12)}
+.topbar nav a{transition:color .2s ease,opacity .2s ease}
+.hero{isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:7%;top:10%;border-radius:50%;background:radial-gradient(circle,rgba(142,91,255,.18),rgba(142,91,255,.05) 42%,transparent 70%);filter:blur(8px);animation:ambient-pulse 8s ease-in-out infinite alternate}
+.portrait-frame{position:relative;overflow:hidden}
+.portrait-frame:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(125deg,transparent 25%,rgba(255,255,255,.16) 48%,transparent 66%);transform:translateX(-130%);animation:portrait-sheen 8s ease-in-out 1.5s infinite}
+.orbit{animation:orbit-spin 34s linear infinite}
+.orbit-two{animation:orbit-spin 48s linear infinite reverse}
+.float-card{transition:transform .35s ease,border-color .35s ease}
+.float-card:hover{transform:translateY(-5px);border-color:rgba(195,165,255,.6)}
+.ticker div{will-change:transform;animation:ticker-drift 32s linear infinite}
+.timeline article{transition:background .25s ease,padding .25s ease}
+.timeline article:hover{background:linear-gradient(90deg,rgba(157,112,255,.075),transparent);padding-left:14px}
+.project-card{position:relative;overflow:hidden;transform:translateZ(0)}
+.project-card:before{content:"";position:absolute;inset:-1px;pointer-events:none;opacity:0;background:radial-gradient(380px circle at var(--pointer-x,50%) var(--pointer-y,50%),rgba(175,132,255,.14),transparent 42%);transition:opacity .3s ease}
+.project-card:hover:before{opacity:1}
+.project-card h3,.project-card p,.project-tech,.project-top{position:relative;z-index:1}
+.skill-grid>div{transition:background .25s ease,transform .25s ease}
+.skill-grid>div:hover{background:linear-gradient(145deg,#17132a,#101020);transform:translateY(-3px)}
+.section-kicker{display:flex;align-items:center;gap:12px}
+.section-kicker:after{content:"";height:1px;width:48px;background:linear-gradient(90deg,var(--violet),transparent);display:inline-block}
+.reveal-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal-ready .reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-ready .project-card.reveal:nth-child(3n+2){transition-delay:.08s}
+.reveal-ready .project-card.reveal:nth-child(3n){transition-delay:.16s}
+.button:focus-visible,.filter:focus-visible,a:focus-visible{outline:2px solid var(--violet);outline-offset:4px}
+@keyframes ambient-pulse{from{transform:scale(.92);opacity:.65}to{transform:scale(1.12);opacity:1}}
+@keyframes portrait-sheen{0%,65%{transform:translateX(-130%)}82%,100%{transform:translateX(130%)}}
+@keyframes orbit-spin{to{transform:rotate(360deg)}}
+@keyframes ticker-drift{0%{transform:translateX(0)}50%{transform:translateX(-2%)}100%{transform:translateX(0)}}
+@media(max-width:900px){.hero:before{right:50%;transform:translateX(50%);top:30%}.timeline article:hover{padding-left:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal-ready .reveal{opacity:1;transform:none}}
