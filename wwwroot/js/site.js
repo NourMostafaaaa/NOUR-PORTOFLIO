@@ -19,3 +19,16 @@ document.querySelectorAll(".project-card").forEach(card=>{
   card.style.setProperty("--pointer-y",(event.clientY-rect.top)+"px");
  });
 });
+
+
+/* Active section indicator for the fixed navigation */
+const navLinks=[...document.querySelectorAll('.topbar nav a[href^="#"]')];
+if("IntersectionObserver" in window && navLinks.length){
+ const sections=navLinks.map(link=>document.querySelector(link.getAttribute("href"))).filter(Boolean);
+ const navObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting) navLinks.forEach(link=>link.classList.toggle("is-current",link.getAttribute("href")==="#"+entry.target.id));
+  });
+ },{rootMargin:"-35% 0px -55% 0px"});
+ sections.forEach(section=>navObserver.observe(section));
+}
